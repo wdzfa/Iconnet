@@ -1,0 +1,6 @@
+1. Create database iconnet
+	psql -U postgres
+	CREATE DATABASE iconnet;
+2. setup pada application.properties jika terdapat password
+3. run application
+

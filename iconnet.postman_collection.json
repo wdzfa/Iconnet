@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "0614d079-6a32-48fa-9778-57fbd02eb0a7",
+		"name": "iconnet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32291189"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"Password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"Password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "validate-token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/validate-token?accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aWJpc29ubzRAZ21haWwuY29tIiwiaWF0IjoxNzU1MjczNjk3LCJleHAiOjE3NTUyNzQ1OTd9.gNEEpIRr7vKrFeLWFF55AaqRBnvg1EozeA_hJfJDtbo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"validate-token"
+					],
+					"query": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aWJpc29ubzRAZ21haWwuY29tIiwiaWF0IjoxNzU1MjczNjk3LCJleHAiOjE3NTUyNzQ1OTd9.gNEEpIRr7vKrFeLWFF55AaqRBnvg1EozeA_hJfJDtbo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh-token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"password\": \"Password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/refresh-token"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/logout?accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aWJpc29ubzRAZ21haWwuY29tIiwiaWF0IjoxNzU1MjczNjk3LCJleHAiOjE3NTUyNzQ1OTd9.gNEEpIRr7vKrFeLWFF55AaqRBnvg1EozeA_hJfJDtbo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ3aWJpc29ubzRAZ21haWwuY29tIiwiaWF0IjoxNzU1MjczNjk3LCJleHAiOjE3NTUyNzQ1OTd9.gNEEpIRr7vKrFeLWFF55AaqRBnvg1EozeA_hJfJDtbo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
